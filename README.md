@@ -69,11 +69,10 @@ It demonstrates the use of HTML, CSS, and JavaScript in creating a structured us
 •⁠  ⁠Improve mobile responsiveness.
 •⁠  ⁠Add more customization options.
 
-## 👨‍💻 Author
+## 👨‍💻 Author -- Alfaiz546 ##
 
-*Alfaiz546*
-
-* TEAM MEMBER AND THEIR CONTRIBUTION *
+* TEAM MEMBER AND THEIR CONTRIBUTION
+*  Alfaiz Khatik (Javascript)
 *  Mohd Faiz Ansari ( README)
 *  Muhamad Razin-frontend (HTML)
 *  Deepak Sonkar- FRONTEND(CSS )
