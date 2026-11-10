@@ -49,3 +49,40 @@ git clone https://github.com/alfaiz546/Web-Dev-Lab_Exercise.git
 
 bash
 cd Web-Dev-Lab_Exercise
+### 3. Open the Project
+
+Open ⁠ scientific calc.html ⁠ in your preferred web browser.
+
+You can also open the project using Visual Studio Code and use the Live Server extension.
+
+## 🎯 Project Objective
+
+The main objective of this project is to apply fundamental web development concepts to build an interactive mathematical application.
+
+It demonstrates the use of HTML, CSS, and JavaScript in creating a structured user interface and a collection of mathematical tools.
+
+## 🔮 Future Improvements
+
+•⁠  ⁠Improve calculation accuracy and error handling.
+•⁠  ⁠Add more advanced mathematical functions.
+•⁠  ⁠Enhance graph visualization.
+•⁠  ⁠Improve mobile responsiveness.
+•⁠  ⁠Add more customization options.
+
+## 👨‍💻 Author
+
+*Alfaiz546*
+
+* TEAM MEMBER AND THEIR CONTRIBUTION *
+*  Mohd Faiz Ansari ( README)
+*  Muhamad Razin-frontend (HTML)
+*  Deepak Sonkar- FRONTEND(CSS )
+*  NIT Ahangare-(README)
+   
+GitHub: [@alfaiz546](https://github.com/alfaiz546)
+
+## 📄 License
+
+This project is created for educational and learning purposes.
+
+---
