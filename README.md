@@ -1,87 +1,83 @@
 # 🧮 SciCalc Pro – Scientific Calculator
 
-A modern, interactive scientific calculator designed to make mathematical calculations easier, faster, and more organized.
+A modern, interactive scientific calculator and math workspace built with HTML, CSS, and JavaScript.
 
-SciCalc Pro is a web-based mathematical workspace that brings multiple mathematical tools together in one interface. It is designed for students and anyone who needs a convenient platform for mathematical calculations.
+SciCalc Pro brings together a scientific calculator, graph plotter, equation solver, matrix tools, statistics calculator, unit converter, and formula library in a single interface.
 
 ## ✨ Features
 
-- *Scientific Calculator* – Perform mathematical and scientific calculations.
-- *Graph Plotter* – Visualize mathematical functions and graphs.
-- *Equation Solver* – Solve mathematical equations.
-- *Matrix Calculator* – Work with matrix operations.
-- *Statistics* – Access statistical calculation tools.
-- *Unit Converter* – Convert between different measurement units.
-- *Formula Library* – Access useful mathematical formulas.
-- *Calculation History* – View, search, and manage previous calculations.
-- *Memory Functions* – Store and recall calculation values.
-- *DEG/RAD Modes* – Switch between degrees and radians.
-- *Keyboard Support* – Enter mathematical expressions using your keyboard.
-- *Theme Toggle* – Switch the application theme.
+- Scientific calculator
+- Graph plotting support
+- Equation solving
+- Matrix operations
+- Statistical analysis
+- Unit conversion
+- Formula library
+- Calculation history
+- Memory functions
+- DEG/RAD mode toggle
+- Keyboard input support
+- Theme toggle
 
 ## 🛠️ Technologies Used
 
-- HTML5 – Structure of the web application.
-- CSS3 – Styling and user interface design.
-- JavaScript – Interactive functionality and calculations.
+- HTML5
+- CSS3
+- JavaScript
 
 ## 📂 Project Structure
 
-text
+```text
 Web-Dev-Lab_Exercise/
-│
 ├── scientific calc.html
 ├── script.js
-└── README.md
-
+├── style.css
+├── README.md
+└── .gitignore (if present)
+```
 
 ## 🚀 Getting Started
 
-Follow these steps to run the project locally.
+### 1. Clone the repository
 
-### 1. Clone the Repository
-
-bash
+```bash
 git clone https://github.com/alfaiz546/Web-Dev-Lab_Exercise.git
+```
 
+### 2. Navigate to the project folder
 
-### 2. Navigate to the Project Folder
-
-bash
+```bash
 cd Web-Dev-Lab_Exercise
-### 3. Open the Project
+```
 
-Open ⁠ scientific calc.html ⁠ in your preferred web browser.
+### 3. Open the app
 
-You can also open the project using Visual Studio Code and use the Live Server extension.
+Open `scientific calc.html` in your preferred browser.
+
+You can also use Visual Studio Code with the Live Server extension for a smoother preview experience.
 
 ## 🎯 Project Objective
 
-The main objective of this project is to apply fundamental web development concepts to build an interactive mathematical application.
-
-It demonstrates the use of HTML, CSS, and JavaScript in creating a structured user interface and a collection of mathematical tools.
+The goal of this project is to apply core web development concepts to build a functional mathematical workspace using HTML, CSS, and JavaScript.
 
 ## 🔮 Future Improvements
 
-•⁠  ⁠Improve calculation accuracy and error handling.
-•⁠  ⁠Add more advanced mathematical functions.
-•⁠  ⁠Enhance graph visualization.
-•⁠  ⁠Improve mobile responsiveness.
-•⁠  ⁠Add more customization options.
+- Improve calculation accuracy and error handling
+- Add more advanced mathematical functions
+- Enhance graph visualization
+- Improve mobile responsiveness
+- Add more customization options
 
-## 👨‍💻 Author -- Alfaiz546 ##
+## 👨‍💻 Authors
 
-* TEAM MEMBER AND THEIR CONTRIBUTION
-*  Alfaiz Khatik (Javascript)
-*  Mohd Faiz Ansari ( README)
-*  Muhamad Razin-frontend (HTML)
-*  Deepak Sonkar- FRONTEND(CSS )
-*  NIT Ahangare-(README)
-   
+- Alfaiz Khatik — JavaScript
+- Mohd Faiz Ansari — README
+- Muhamad Razin — Frontend (HTML)
+- Deepak Sonkar — Frontend (CSS)
+- NIT Ahangare — README
+
 GitHub: [@alfaiz546](https://github.com/alfaiz546)
 
 ## 📄 License
 
 This project is created for educational and learning purposes.
-
----
