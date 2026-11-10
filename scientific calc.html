@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080d18">
+    <meta name="description" content="SciCalc Pro - A complete scientific mathematics workspace.">
+    <title>SciCalc Pro | Scientific Workspace</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+<div class="app-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#">
+            <div class="brand-logo">Σ</div>
+            <div>
+                <strong>SciCalc <span>Pro</span></strong>
+                <small>MATHEMATICAL WORKSPACE</small>
+            </div>
+        </a>
+
+        <div class="sidebar-label">WORKSPACE</div>
+
+        <nav class="navigation" aria-label="Main navigation">
+            <button class="nav-item active" data-page="calculator">
+                <span class="nav-icon">⌗</span> Calculator
+            </button>
+            <button class="nav-item" data-page="graph">
+                <span class="nav-icon">⌁</span> Graph Plotter
+            </button>
+            <button class="nav-item" data-page="equations">
+                <span class="nav-icon">∑</span> Equation Solver
+            </button>
+            <button class="nav-item" data-page="matrices">
+                <span class="nav-icon">▦</span> Matrix Calculator
+            </button>
+            <button class="nav-item" data-page="statistics">
+                <span class="nav-icon">σ</span> Statistics
+            </button>
+            <button class="nav-item" data-page="converter">
+                <span class="nav-icon">⇄</span> Unit Converter
+            </button>
+            <button class="nav-item" data-page="formulas">
+                <span class="nav-icon">π</span> Formula Library
+            </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="system-status">
+                <span class="status-dot"></span>
+                All systems operational
+            </div>
+            <small>SCICALC PRO · VERSION 2.0</small>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <button class="mobile-menu icon-button" id="menuToggle" aria-label="Toggle menu">☰</button>
+
+            <div class="page-heading">
+                <span class="eyebrow">MATHEMATICAL WORKSPACE</span>
+                <h1 id="pageTitle">Scientific Calculator</h1>
+            </div>
+
+            <div class="topbar-actions">
+                <span class="mode-badge">● ADVANCED MODE</span>
+                <button class="icon-button" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">◐</button>
+            </div>
+        </header>
+
+        <div class="page-container">
+
+            <!-- CALCULATOR PAGE -->
+            <section class="page active" id="page-calculator">
+                <div class="page-intro">
+                    <div>
+                        <h2>Scientific Calculator</h2>
+                        <p>Advanced calculations with precision and speed.</p>
+                    </div>
+                    <button class="angle-toggle" id="angleToggle">DEG</button>
+                </div>
+
+                <div class="calculator-layout">
+                    <section class="panel calculator-panel">
+                        <div class="calculator-toolbar">
+                            <span class="panel-tag">STANDARD SCIENTIFIC</span>
+                            <div class="memory-controls">
+                                <button data-memory="mc">MC</button>
+                                <button data-memory="mr">MR</button>
+                                <button data-memory="mplus">M+</button>
+                                <button data-memory="mminus">M−</button>
+                            </div>
+                        </div>
+
+                        <div class="calculator-display">
+                            <div class="display-meta">
+                                <span>EXPRESSION</span>
+                                <span id="memoryIndicator">MEMORY EMPTY</span>
+                            </div>
+
+                            <input
+                                id="expression"
+                                type="text"
+                                placeholder="Enter an expression..."
+                                autocomplete="off"
+                                spellcheck="false"
+                                aria-label="Mathematical expression"
+                            >
+
+                            <div class="result-section">
+                                <span>RESULT</span>
+                                <div class="result-row">
+                                    <div id="result" aria-live="polite">0</div>
+                                    <button id="copyResult" class="copy-button" title="Copy result">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="calculator-options">
+                            <button class="option-button active" id="degMode">DEG</button>
+                            <button class="option-button" id="radMode">RAD</button>
+                            <span class="keyboard-hint">Keyboard supported</span>
+                        </div>
+
+                        <div class="keypad" id="keypad">
+                            <!-- JavaScript generates calculator keys -->
+                        </div>
+                    </section>
+
+                    <aside class="panel history-panel">
+                        <div class="panel-heading">
+                            <div>
+                                <h3>Calculation History</h3>
+                                <p>Your previous calculations</p>
+                            </div>
+                            <button class="text-button" id="clearHistory">Clear all</button>
+                        </div>
+
+                        <input
+                            type="search"
+                            id="historySearch"
+                            class="search-input"
+                            placeholder="Search history..."
+                        >
+
+                        <div class="history-list" id="historyList">
+                            <div class="empty-state">
+                                <span class="empty-icon">◷</span>
+                                <strong>No calculations yet</strong>
+                                <p>Your results will appear here.</p>
+                            </div>
+                        </div>
+
+                        <button class="secondary-button full-button" id="exportHistory">
+                            Export History
+                        </button>
+                    </aside>
+                </div>
+            </section>
+
+            <!-- GRAPH PLOTTER PAGE -->
+            <section class="page" id="page-graph">
+                <div class="page-intro">
+                    <div>
+                        <h2>Graph Plotter</h2>
+                        <p>Visualize mathematical functions on a coordinate plane.</p>
+                    </div>
+                </div>
+
+                <div class="panel tool-panel">
+                    <div class="form-group">
+                        <label for="graphExpression">Function f(x)</label>
+                        <input id="graphExpression" class="text-input" type="text" placeholder="Example: sin(x), x^2, 2*x+3">
+                    </div>
+
+                    <div class="input-grid">
+                        <div class="form-group">
+                            <label for="graphMin">X minimum</label>
+                            <input id="graphMin" class="text-input" type="number" value="-10">
+                        </div>
+                        <div class="form-group">
+                            <label for="graphMax">X maximum</label>
+                            <input id="graphMax" class="text-input" type="number" value="10">
+                        </div>
+                    </div>
+
+                    <div class="button-row">
+                        <button class="primary-button" id="plotGraph">Plot Function</button>
+                        <button class="secondary-button" id="resetGraph">Reset</button>
+                    </div>
+
+                    <div class="graph-container">
+                        <canvas id="graphCanvas" aria-label="Function graph"></canvas>
+                    </div>
+                    <p class="helper-text" id="graphMessage">Enter a function and select Plot Function.</p>
+                </div>
+            </section>
+
+            <!-- EQUATION SOLVER PAGE -->
+            <section class="page" id="page-equations">
+                <div class="page-intro">
+                    <div>
+                        <h2>Equation Solver</h2>
+                        <p>Solve linear and quadratic equations.</p>
+                    </div>
+                </div>
+
+                <div class="panel tool-panel">
+                    <div class="form-group">
+                        <label for="equationType">Equation type</label>
+                        <select id="equationType" class="text-input">
+                            <option value="linear">Linear equation (ax + b = 0)</option>
+                            <option value="quadratic">Quadratic equation (ax² + bx + c = 0)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-grid three-columns">
+                        <div class="form-group">
+                            <label for="coefficientA">Coefficient a</label>
+                            <input id="coefficientA" class="text-input" type="number" value="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="coefficientB">Coefficient b</label>
+                            <input id="coefficientB" class="text-input" type="number" value="5">
+                        </div>
+                        <div class="form-group" id="coefficientCGroup">
+                            <label for="coefficientC">Coefficient c</label>
+                            <input id="coefficientC" class="text-input" type="number" value="6">
+                        </div>
+                    </div>
+
+                    <button class="primary-button" id="solveEquation">Solve Equation</button>
+                    <div class="output-panel" id="equationOutput">
+                        <p class="muted-text">Your solution will appear here.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MATRIX CALCULATOR PAGE -->
+            <section class="page" id="page-matrices">
+                <div class="page-intro">
+                    <div>
+                        <h2>Matrix Calculator</h2>
+                        <p>Perform common matrix operations.</p>
+                    </div>
+                </div>
+
+                <div class="panel tool-panel">
+                    <div class="input-grid">
+                        <div class="form-group">
+                            <label for="matrixOperation">Operation</label>
+                            <select id="matrixOperation" class="text-input">
+                                <option value="add">Addition (A + B)</option>
+                                <option value="subtract">Subtraction (A − B)</option>
+                                <option value="multiply">Multiplication (A × B)</option>
+                                <option value="determinant">Determinant of A</option>
+                                <option value="inverse">Inverse of A</option>
+                                <option value="transpose">Transpose of A</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="matrixSize">Matrix size</label>
+                            <select id="matrixSize" class="text-input">
+                                <option value="2">2 × 2</option>
+                                <option value="3">3 × 3</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="matrix-input-layout">
+                        <div>
+                            <h3>Matrix A</h3>
+                            <div class="matrix-grid" id="matrixA"></div>
+                        </div>
+                        <div id="matrixBSection">
+                            <h3>Matrix B</h3>
+                            <div class="matrix-grid" id="matrixB"></div>
+                        </div>
+                    </div>
+
+                    <button class="primary-button" id="calculateMatrix">Calculate</button>
+                    <div class="output-panel" id="matrixOutput">
+                        <p class="muted-text">Matrix result will appear here.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STATISTICS PAGE -->
+            <section class="page" id="page-statistics">
+                <div class="page-intro">
+                    <div>
+                        <h2>Statistics Calculator</h2>
+                        <p>Analyze numerical datasets and calculate statistical measures.</p>
+                    </div>
+                </div>
+
+                <div class="panel tool-panel">
+                    <div class="form-group">
+                        <label for="statisticsData">Enter numbers separated by commas</label>
+                        <textarea id="statisticsData" class="text-input" rows="4" placeholder="Example: 10, 20, 30, 40, 50"></textarea>
+                    </div>
+
+                    <button class="primary-button" id="calculateStatistics">Analyze Data</button>
+
+                    <div class="statistics-grid" id="statisticsOutput">
+                        <div class="stat-card"><span>Mean</span><strong>—</strong></div>
+                        <div class="stat-card"><span>Median</span><strong>—</strong></div>
+                        <div class="stat-card"><span>Mode</span><strong>—</strong></div>
+                        <div class="stat-card"><span>Variance</span><strong>—</strong></div>
+                        <div class="stat-card"><span>Std. Deviation</span><strong>—</strong></div>
+                        <div class="stat-card"><span>Count</span><strong>—</strong></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- UNIT CONVERTER PAGE -->
+            <section class="page" id="page-converter">
+                <div class="page-intro">
+                    <div>
+                        <h2>Unit Converter</h2>
+                        <p>Convert measurements between commonly used units.</p>
+                    </div>
+                </div>
+
+                <div class="panel tool-panel converter-panel">
+                    <div class="form-group">
+                        <label for="conversionCategory">Measurement category</label>
+                        <select id="conversionCategory" class="text-input">
+                            <option value="length">Length</option>
+                            <option value="mass">Mass</option>
+                            <option value="temperature">Temperature</option>
+                            <option value="area">Area</option>
+                            <option value="volume">Volume</option>
+                            <option value="speed">Speed</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="conversionValue">Value</label>
+                        <input id="conversionValue" class="text-input" type="number" value="1">
+                    </div>
+
+                    <div class="input-grid">
+                        <div class="form-group">
+                            <label for="conversionFrom">From</label>
+                            <select id="conversionFrom" class="text-input"></select>
+                        </div>
+                        <div class="form-group">
+                            <label for="conversionTo">To</label>
+                            <select id="conversionTo" class="text-input"></select>
+                        </div>
+                    </div>
+
+                    <button class="primary-button" id="convertUnits">Convert</button>
+                    <div class="conversion-result" id="conversionOutput">
+                        <span>CONVERTED VALUE</span>
+                        <strong>—</strong>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FORMULA LIBRARY PAGE -->
+            <section class="page" id="page-formulas">
+                <div class="page-intro">
+                    <div>
+                        <h2>Formula Library</h2>
+                        <p>Find useful mathematical formulas and definitions.</p>
+                    </div>
+                </div>
+
+                <div class="panel tool-panel">
+                    <input
+                        id="formulaSearch"
+                        class="search-input"
+                        type="search"
+                        placeholder="Search formulas by name or topic..."
+                    >
+
+                    <div class="formula-categories" id="formulaCategories">
+                        <button class="category-button active" data-category="all">All</button>
+                        <button class="category-button" data-category="algebra">Algebra</button>
+                        <button class="category-button" data-category="geometry">Geometry</button>
+                        <button class="category-button" data-category="trigonometry">Trigonometry</button>
+                        <button class="category-button" data-category="calculus">Calculus</button>
+                    </div>
+
+                    <div class="formula-grid" id="formulaGrid">
+                        <p class="muted-text">Loading formulas...</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <footer class="app-footer">
+            <span>© 2026 SciCalc Pro</span>
+            <span>Built for precision. Designed for discovery.</span>
+        </footer>
+    </main>
+</div>
+
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+</body>
+</html>
